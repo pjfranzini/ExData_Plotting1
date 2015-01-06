@@ -1,9 +1,18 @@
-setwd("~/Dropbox/MacDocuments/programming/R/Coursera data track/exploratoryDA/week1 Ex/ExData_Plotting1")
-list.files()
+##setwd("~/Dropbox/MacDocuments/programming/R/Coursera data track/exploratoryDA/week1 Ex/ExData_Plotting1")
+##list.files()
 
+##powerC <- read.csv("./household_power_consumption.txt", header=TRUE,  sep=";", na.strings = "?")
+##powerC <- subset(powerC, Date == "1/2/2007" | Date == "2/2/2007" )
+##hist(powerC$Global_active_power)
+## this was doing things locally;
+## now find a way to read in file from web, unzip it, use it, erase it
+download.file("http://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", "data.zip")
+unzip("data.zip", "household_power_consumption.txt")
 powerC <- read.csv("./household_power_consumption.txt", header=TRUE,  sep=";", na.strings = "?")
 powerC <- subset(powerC, Date == "1/2/2007" | Date == "2/2/2007" )
-hist(powerC$Global_active_power)
+file.remove("data.zip")
+file.remove("household_power_consumption.txt")
+
 
 ##xlim = c(0, 9), ylim = c(0,1200)  -- not needed here
 
