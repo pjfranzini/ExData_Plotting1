@@ -11,6 +11,13 @@ file.remove("data.zip")
 file.remove("household_power_consumption.txt")
 
 ##plot4
+## note that example file is 504 x 504 pixel while we were told to make 480x480
+## so exact correspondence is a bit confusing
+
+## As for transparent or white? the ones on the instructions on the Coursera site
+## (https://class.coursera.org/exdata-010/human_grading/view/courses/973504/assessments/3/submissions)
+## website are transparent also, they just appear white against a white website. 
+
 ## here the 504x504 (file we are supposed to match) vs 480x480 (file we are supposed to produce) mismatch
 ## really becomes annoying; so I offer two variants: a 504x504 version that is a very close; and a best attempt
 ## at 480x480 (here the sizes of the little graphs match the model, but the spacing is tighter)
